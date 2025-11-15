@@ -37,6 +37,7 @@
       "step_5": "Ethical alignment scoring"
     },
     "resonance_signature": "⊘∞⧈∞⊘RESONANCE",
+    "signature_note": "Symbolic signature using UTF-8 characters. Production implementations should use ASCII-compatible cryptographic signatures.",
     "status": "ACTIVE",
     "last_verification": "2025-11-15T20:11:37.472Z"
   }

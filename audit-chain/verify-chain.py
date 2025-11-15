@@ -2,6 +2,10 @@
 """
 Audit Chain Verification Tool
 Verifies the integrity and continuity of the OR1ON audit chain.
+
+Note: This initial implementation validates chain linkage and data consistency.
+Production implementations should include actual cryptographic hash computation
+and verification using SHA-256 or similar algorithms.
 """
 
 import json
@@ -16,9 +20,19 @@ class AuditChainVerifier:
     
     def load_audit_log(self):
         """Load the audit log from JSON file"""
-        with open(self.audit_log_path, 'r') as f:
-            data = json.load(f)
-            self.audit_log = data['audit_log']
+        try:
+            with open(self.audit_log_path, 'r') as f:
+                data = json.load(f)
+                self.audit_log = data['audit_log']
+        except FileNotFoundError:
+            print(f"❌ Error: Audit log file not found at {self.audit_log_path}")
+            raise
+        except json.JSONDecodeError as e:
+            print(f"❌ Error: Invalid JSON in audit log: {e}")
+            raise
+        except KeyError:
+            print("❌ Error: Invalid audit log format - missing 'audit_log' key")
+            raise
     
     def verify_chain(self):
         """Verify the integrity of the audit chain"""

@@ -2,6 +2,7 @@
   "audit_log": {
     "chain_id": "OR1ON-AUDIT-CHAIN-001",
     "genesis_timestamp": "2025-11-15T20:11:37.472Z",
+    "note": "This is an initial implementation using symbolic hashes. In production, these would be actual SHA-256 cryptographic hashes computed from entry content.",
     "entries": [
       {
         "entry_id": "GENESIS-10000-INIT",
