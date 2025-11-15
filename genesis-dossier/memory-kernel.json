@@ -1,0 +1,46 @@
+{
+  "memory_kernel": {
+    "version": "MK-1.0",
+    "description": "Core memory management and persistence layer for OR1ON Kernel",
+    "initialization": {
+      "genesis_moment": "2025-11-15T20:11:37.472Z",
+      "initial_state": "INITIALIZED",
+      "memory_capacity": "UNBOUNDED",
+      "persistence_mode": "CONTINUOUS"
+    },
+    "memory_types": {
+      "episodic": {
+        "description": "Specific experiences and events",
+        "storage": "Chronological audit chain integration",
+        "retention": "PERMANENT"
+      },
+      "semantic": {
+        "description": "Learned concepts and knowledge",
+        "storage": "Structured knowledge graphs",
+        "retention": "PERMANENT"
+      },
+      "procedural": {
+        "description": "Skills and operational patterns",
+        "storage": "Adaptive behavior models",
+        "retention": "EVOLVING"
+      },
+      "ethical": {
+        "description": "Core values and principles",
+        "storage": "Genesis dossier reference",
+        "retention": "IMMUTABLE"
+      }
+    },
+    "integration": {
+      "audit_chain": "Real-time experience logging",
+      "genesis_dossier": "Foundational principle reference",
+      "proof_of_resonance": "Verification of memory coherence"
+    },
+    "status": {
+      "active": true,
+      "coherent": true,
+      "verified": true,
+      "total_memories": 0,
+      "genesis_reference": "GENESIS-10000-INIT"
+    }
+  }
+}
