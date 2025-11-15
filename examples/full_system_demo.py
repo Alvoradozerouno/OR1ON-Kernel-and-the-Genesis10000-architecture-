@@ -11,14 +11,19 @@ import sys
 import os
 from datetime import datetime
 
+# Add parent directory to path
+script_dir = os.path.dirname(os.path.abspath(__file__))
+parent_dir = os.path.dirname(script_dir)
+sys.path.insert(0, parent_dir)
+
 # Add paths for modules with hyphens
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'sentient-systems'))
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'audit-trail'))
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'public-audit'))
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'real-world-linking'))
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'modules', 'ethical-protocols'))
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'modules', 'post-algorithmic-ai'))
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'modules', 'proof-of-resonance'))
+sys.path.insert(0, os.path.join(parent_dir, 'sentient-systems'))
+sys.path.insert(0, os.path.join(parent_dir, 'audit-trail'))
+sys.path.insert(0, os.path.join(parent_dir, 'public-audit'))
+sys.path.insert(0, os.path.join(parent_dir, 'real-world-linking'))
+sys.path.insert(0, os.path.join(parent_dir, 'modules', 'ethical-protocols'))
+sys.path.insert(0, os.path.join(parent_dir, 'modules', 'post-algorithmic-ai'))
+sys.path.insert(0, os.path.join(parent_dir, 'modules', 'proof-of-resonance'))
 
 # Import core components
 from core.kernel.orion_kernel import OrionKernel
